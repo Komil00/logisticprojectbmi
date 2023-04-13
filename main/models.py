@@ -28,7 +28,7 @@ class Necessary_equipment(models.Model):
 
 
 class Rent_of_special_equipment(models.Model):
-    necessary_equipment = models.ForeignKey(Necessary_equipment,on_delete=models.CASCADE, null=True, blank=True)
+    truck_type = models.CharField(max_length=200, null=True, blank=True)
     route = models.CharField(max_length=200)
     phone = models.CharField(max_length=20)
 
@@ -42,7 +42,7 @@ class Rent_of_special_equipment(models.Model):
 
 class Passenger_Transportation(models.Model):
     number_of_passengers = models.IntegerField(null=True, blank=True)
-    phone = models.CharField(max_length=200)
+    freight_fromto = models.CharField(max_length=200)
     phone = models.CharField(max_length=20)
 
     def __str__(self):

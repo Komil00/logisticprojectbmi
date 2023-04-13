@@ -1,0 +1,63 @@
+{% extends 'index.htm' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="servicePart serviceItem even" id="service_7805" style="background-image: url('upload/information_system_84/7/8/0/item_7805/item_7805.png');">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-sm-offset-3"><h2 class="h1"><a href="" title="Аренда спецтехники">Аренда спецтехники</a></h2><div class="row"><div class="col-sm-10"><div class="summary"><p>Более 20 единиц грузовой и&nbsp;спецтехники Scania, МАЗ, КАМАЗ, Газель, Тралы ЧТПЗ и&nbsp;Политранс: погрузчики, автокраны, автовышки, самосвалы, ассенизаторская машина.</p>
+  <p>Работаем с&nbsp;крупными компаниями и&nbsp;частными лицами.</p></div></div></div>
+  <form action="" method="post" id="form_service_134">
+    {% csrf_token %}
+
+      <div class="row">
+          <div class="col-sm-8">
+              <div class="resultForm"></div>
+              <div class="form-group field">
+                  <label>Необходимая техника</label>
+                  <select class="form-control input-sm" name="truck_type">
+                      <optgroup label="Самопогрузчик">
+                          <option>Самопогрузчик 5 т</option>
+                          <option>Самопогрузчик 10 т</option>
+                          <option>Самопогрузчик 15 т</option>
+                      </optgroup>
+                      <optgroup label="Автокран">
+                          <option>Автокран 14 т</option>
+                          <option>Автокран 16 т</option>
+                          <option>Автокран 25 т</option>
+                      </optgroup>
+                      <optgroup label="Автовышка">
+                          <option>Автовышка 22 м</option>
+                          <option>Автовышка 27 м</option>
+                      </optgroup>
+                      <optgroup label="Самосвал">
+                          <option>Самосвал  10 т</option>
+                          <option>Самосвал  20 т</option>
+                      </optgroup>
+                      <optgroup label="Ассенизаторская машина">
+                          <option>Ассенизаторская машина</option>
+                      </optgroup>
+                  </select>
+              </div>
+              <div class="form-group field">
+                  <label>Характер работ, маршрут</label>
+                  <textarea class="form-control input-sm" name="freight_fromto" rows="3" placeholder="Перевозка вагончика из Самарканда в Ташкент"></textarea>
+              </div>
+              <div class="form-group field">
+                  <label>Контактный телефон</label>
+                  <input type="text" class="form-control input-sm" name="phone" placeholder="+998930366747" data-xp="type: 'phone', required: true">
+                  <div class="show_on_blured_and_invalid">Не похоже на телефон</div>
+              </div>
+              <div class="sendField field">
+                  <input type="hidden" class="form-control" name="formType" value="Аренда спецтехники">
+                  <button type="button" class="btn btn-success-body-normal btn-sm" data-xp="enabled_on_completed: true" onclick="sendForm('#form_service_134')"><i class="fa fa-circle-o-notch fa-spin hidden"></i> Отправить</button>
+              </div>
+          </div>
+      </div>
+  </form></div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'index.htm' %}
+{% load static %}
+
+{% block content %}
+
+<div class="servicePart serviceItem" id="service_7807" style="background-image: url('upload/information_system_84/7/8/0/item_7807/item_7807.png');">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-sm-offset-3"><h2 class="h1"><a href="" title="Автомобильные перевозки">Автомобильные перевозки</a></h2><div class="row"><div class="col-sm-10"><div class="summary"><p>Выполним перевозку различных грузов в&nbsp;любой регион Узбекистана.</p>
+  <p>Дополнительно поможем с&nbsp;оформлением необходимых документов.<br> Сроки перевозок по&nbsp;Узбекистана составляют до&nbsp;7 дней.</p></div></div></div>
+  
+  
+  <form action="" method="post" id="form_service_133">
+    {% csrf_token %}
+
+      <div class="row">
+          <div class="col-sm-8">
+              <div class="resultForm"></div>
+              <div class="row">
+                  <div class="col-sm-8">
+                      <div class="form-group field">
+              
+                          <label>Характер груза</label>
+              
+                          <input type="text" class="form-control input-sm" id="id_character" name="character" placeholder="Мебель, личные вещи" data-xp="required: true">
+                      </div>
+                  </div>
+                  <div class="col-sm-4">
+                      <div class="field">
+                          <label>Вес груза</label>
+                          <div class="input-group input-group-sm">
+                              <input type="number" class="form-control input-sm" id="id_weight" name="weight" placeholder="12" data-xp="required: true, type: 'number', min: 1">
+                              <span class="input-group-addon">т</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="form-group field">
+                  <label>Маршрут <span class="text-muted">(откуда и куда)</span></label>
+                  <textarea class="form-control input-sm" name="route" rows="3" placeholder="Самарканд -> Ташкент"></textarea>
+              </div>
+              <div class="form-group field">
+                  <label>Контактный телефон</label>
+                  <input type="text" class="form-control input-sm" id="id_phone" name="phone" placeholder="+998930366747" data-xp="type: 'phone', required: true">
+                  <div class="show_on_blured_and_invalid">Не похоже на телефон</div>
+              </div>
+              <div class="flex justify-center items-center">
+                <button class="py-2 px-4 bg-primary_red text-gray-100 font-medium text-lg rounded-md">
+                    Отправить
+                </button>
+            </div>
+          </div>
+      </div>
+  </form>
+  </div>
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}
